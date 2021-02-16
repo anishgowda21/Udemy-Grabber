@@ -1,8 +1,8 @@
 # Udemy course grabber
 
-A flutter app to grab Udemy courses which are temporarily free
+### A flutter app to grab Udemy courses which are temporarily free
 
-## If you like the project please :star the project
+## If you like the project please :star: the project
 
 ## Features!!
 - Get paid udemy courses for free using the coupen codes.
