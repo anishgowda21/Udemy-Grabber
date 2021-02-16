@@ -1,16 +1,16 @@
-# udemy_course_grabber
+# Udemy course grabber
 
-A flutter app to grab udemy courses
+A flutter app to grab Udemy courses which are temporarily free
 
-## Getting Started
+## If you like the project please :star the project
 
-This project is a starting point for a Flutter application.
+## Features!!
+- Get paid udemy courses for free using the coupen codes.
+- Contents get updated regularly.
+- One click to get the course url with coupen code embedded int it.
+## You can download the apk Here
+####[Udemy Courses.apk](https://drive.google.com/drive/folders/1KzXJ7WaDdDInj7PuVUly4YnOZf7J2X5e?usp=sharing)
 
-A few resources to get you started if this is your first Flutter project:
+### Or
+## From the [releases](https://github.com/anishgowda21/Udemy-Grabber/releases)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
