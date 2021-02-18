@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   List data;
 
   Future getCourses() async {
@@ -24,9 +24,21 @@ class _HomePageState extends State<HomePage> {
     return data;
   }
 
+  AnimationController animationController;
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    animationController.dispose();
+  }
+
   @override
   void initState() {
     super.initState();
+    animationController =
+        AnimationController(duration: new Duration(seconds: 2), vsync: this);
+    animationController.repeat();
     getCourses();
   }
 
@@ -35,7 +47,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: Colors.grey[900],
         appBar: AppBar(
-          title: Text("Udemy Paid Course Grabber"),
+          title: Text("Udemy Course Grabber"),
           backgroundColor: Colors.grey[900],
         ),
         body: Container(
@@ -43,7 +55,11 @@ class _HomePageState extends State<HomePage> {
               future: getCourses(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.data == null) {
-                  return Center(child: new CircularProgressIndicator());
+                  return Center(
+                      child: new CircularProgressIndicator(
+                    valueColor: animationController.drive(
+                        ColorTween(begin: Colors.blueAccent, end: Colors.red)),
+                  ));
                 } else {
                   return ListView.builder(
                       itemCount:
